@@ -10,11 +10,14 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
+import it.ozimov.springboot.mail.configuration.EnableEmailTools;
+
 @SpringBootApplication
 @ComponentScan({"com"})
 @EnableAutoConfiguration
 @EnableJpaRepositories("com.spring.repository")
 @EntityScan("com.spring.domain")
+@EnableEmailTools
 public class QuizApplication {
 	@Bean
 	public SessionFactory sessionFactory(HibernateEntityManagerFactory hemf) {
