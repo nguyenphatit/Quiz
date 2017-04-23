@@ -1,81 +1,58 @@
 <!doctype html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="utf-8" />
-<title>Đăng nhập</title>
-<!--boostrap 4-->
-<link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet" />
-<link th:href="@{/css/dangnhap.css}" rel="stylesheet" />
+	<meta charset="utf-8">
+	<title>Đăng nhập</title>
+	<!--boostrap 4-->
+	<link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+	<link th:href="@{/css/dangnhap.css}" rel="stylesheet">
 </head>
 
 <body>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-7">
+		  	<div class="col-md-7">
 				<h6 style="color: #FFFFFF;"></h6>
-			</div>
-			<!--		form đăng nhập và đăng ký-->
-			<div class="col-md-5">
-				<div class="login-wrap">
+	  		</div>
+<!--		form đăng nhập và đăng ký-->
+		  	<div class="col-md-5">
+		  		<div class="login-wrap">
 					<div class="login-html">
-						<input id="tab-1" type="radio" name="tab" class="sign-in"
-							checked="checked" /> <label for="tab-1" class="tab">ĐĂNG
-							NHẬP</label> <input id="tab-2" type="radio" name="tab" class="sign-up" />
-						<label for="tab-2" class="tab">ĐĂNG KÝ</label>
-
+						<input id="tab-1" type="radio" name="tab" class="sign-in" checked>
+						<label for="tab-1" class="tab">ĐĂNG NHẬP</label>
+						<input id="tab-2" type="radio" name="tab" class="sign-up">
+						<label for="tab-2" class="tab"></label>
+						
 						<div class="login-form">
 							<div class="sign-in-htm">
-								<form method="post" action="#" th:action="@{/account/login}">
+								<form>
 									<div class="group">
-										<label for="email" class="label">Email</label> <input
-											id="email1" type="text" class="input" name="email1" th:value="${email}" />
+										<label for="email" class="label">Email</label>
+										<input id="email" type="text" class="input"/>
 									</div>
 									<div class="group">
-										<label for="pass" class="label">Mật khẩu</label> <input
-											id="pass1" type="password" class="input" data-type="password" name="pass1"/>
+										<label for="password" class="label">Mật khẩu</label>
+										<input id="password" type="password" class="input"/>
 									</div>
 									<div class="group">
-										<input id="check" type="checkbox" class="check"
-											name="remember_me" /> <label for="check"><span
-											class="icon"></span> Ghi nhớ tôi</label>
+										<input type="submit" class="button" value="Đăng nhập"/>
 									</div>
-									<div class="group">
-										<input type="submit" class="button" value="Đăng nhập" />
-									</div>
-									<div class="text-center" style="color: #e24d4d"><p th:text="${err}"></p></div>
 									<div class="hr"></div>
 									<div class="foot-lnk">
-										<a th:href="@{/account/forgot_pass}">Quên mật khẩu?</a>
+										<p class="text-left">&emsp;
+											<a th:href="@{/account/forgot_pass}">Quên mật khẩu?</a>&emsp;
+											<a th:href="@{/account/sign_up}">Đăng ký ngay !</a>
+										</p>
 									</div>
 								</form>
 							</div>
 							<div class="sign-up-htm">
-								<form>
-									<div class="group">
-										<label for="email" class="label">Email</label> <input
-											id="email2" type="text" class="input" />
-									</div>
-									<div class="group">
-										<label for="pass" class="label">Mật khẩu</label> <input
-											id="pass2" type="password" class="input" data-type="password" />
-									</div>
-									<div class="group">
-										<label for="pass" class="label">Nhập lại mật khẩu</label> <input
-											id="pass" type="password" class="input" data-type="password" />
-									</div>
-									<div class="group">
-										<input type="submit" class="button" value="Đăng ký" />
-									</div>
-									<div class="hr"></div>
-									<div class="foot-lnk">
-										<label for="tab-1">Bạn đã là thành viên?</label>
-									</div>
-								</form>
+								
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+		  	</div>
 		</div>
 	</div>
 
