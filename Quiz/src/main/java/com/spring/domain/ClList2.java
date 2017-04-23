@@ -2,28 +2,19 @@ package com.spring.domain;
 
 import java.io.Serializable;
 import java.util.List;
+
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 @Entity
 @Table(name = "clList2")
-@XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "ClList2.findAll", query = "SELECT c FROM ClList2 c")
-    , @NamedQuery(name = "ClList2.findByPmcode", query = "SELECT c FROM ClList2 c WHERE c.pmcode = :pmcode")
-    , @NamedQuery(name = "ClList2.findByCdgr", query = "SELECT c FROM ClList2 c WHERE c.cdgr = :cdgr")
-    , @NamedQuery(name = "ClList2.findByValName", query = "SELECT c FROM ClList2 c WHERE c.valName = :valName")
-    , @NamedQuery(name = "ClList2.findByParamName", query = "SELECT c FROM ClList2 c WHERE c.paramName = :paramName")})
 public class ClList2 implements Serializable {
 
     private static final long serialVersionUID = 1L;
