@@ -15,7 +15,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.2.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
 	<properties>
@@ -57,18 +57,57 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-	 <dependency>
-	  <groupId>org.eclipse.persistence</groupId>
-	  <artifactId>eclipselink</artifactId>
-	  <version>2.5.2</version>
-	 </dependency>
-	 <dependency>
-	  <groupId>org.eclipse.persistence</groupId>
-	  <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
-	  <version>2.5.2</version>
-	  <scope>provided</scope>
-	 </dependency>
+		<dependency>
+			<groupId>org.eclipse.persistence</groupId>
+			<artifactId>eclipselink</artifactId>
+			<version>2.5.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.persistence</groupId>
+			<artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
+			<version>2.5.2</version>
+			<scope>provided</scope>
+		</dependency>
+
+
+
+		<!-- https://mvnrepository.com/artifact/net.sourceforge.nekohtml/nekohtml -->
+		<dependency>
+			<groupId>net.sourceforge.nekohtml</groupId>
+			<artifactId>nekohtml</artifactId>
+			<version>1.9.22</version><!--$NO-MVN-MAN-VER$ -->
+		</dependency>
+
+		<!-- Spring Boot Email Tools -->
+		<dependency>
+			<groupId>it.ozimov</groupId>
+			<artifactId>spring-boot-email-core</artifactId>
+			<version>0.6.1</version>
+		</dependency>
+		<!-- thymealeaf for email -->
+		<dependency>
+			<groupId>it.ozimov</groupId>
+			<artifactId>spring-boot-thymeleaf-email</artifactId>
+			<version>0.6.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>20.0</version>
+		</dependency>
+			<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+			<dependency>
+			    <groupId>commons-codec</groupId>
+			    <artifactId>commons-codec</artifactId>
+			    <version>1.10</version><!--$NO-MVN-MAN-VER$-->
+			</dependency>
+			
+
 	</dependencies>
+
+
 
 	<build>
 		<plugins>

@@ -1,0 +1,323 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Quiz</title>
+<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/profile.css" rel="stylesheet">
+<link href="../css/loading.css" rel="stylesheet">
+<link href="../css/responsive.css" rel="stylesheet">
+<link href="../fonts/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+	<!--	menu fixed top-->
+	<nav id="header" class="navbar navbar-fixed-top">
+		<div id="header-container" class="container navbar-container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a id="brand" class="navbar-brand" href="#">
+					<span id="open-slide" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+						
+					<span id="close-slide" style="font-size:30px;cursor:pointer" onclick="closeNav()">&times;</span>
+				</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<i class="fa fa-television"></i> Quản lý
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Quản lý câu hỏi</a></li>
+							<li><a href="#">Quản lý đề thi</a></li>
+						</ul>
+					</li>
+					
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<i class="fa fa-comment-o"></i> Thông báo 
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								Không có thông báo
+							</li>
+							<li class="divider"></li>
+						</ul>
+					</li>
+					
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<img src="../images/15284079_583315985195410_4289784661158093094_n.jpg" alt="Ảnh đại diện" width="19px" class="img-circle"/> Trần Văn Thắng 
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Hồ sơ</a></li>
+							<li><a href="#">Chỉnh sửa</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Trợ giúp</a></li>
+							<li><a href="#">Đăng xuất</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+            <!--	slider menu-->
+		<div id="mySidenav" class="sidenav">
+			<a href="homepage.html">Trang chủ</a>
+			<a href="#">Thông tin</a>
+			<a href="#">Dịch vụ</a>
+			<a href="#">Liên hệ</a>
+			<div class="form-group">
+    		<label for="room" class="col-sm-2 control-label">Mã phòng</label>
+    			<div class="col-sm-10">
+      				<div class="loader">
+						<div class="bar"></div>
+						<div class="bar"></div>
+						<div class="bar"></div>
+					</div>
+    			</div>
+  			</div>
+		</div>
+       
+<!--       nội dung trang web-->
+        <div id="main">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-4">
+<!--					thông tin cá nhân-->
+						<div class="divcontent row">
+							<div class="col-md-5 col-sm-6 col-xs-12">
+								<img class="img-circle img-responsive" src="../images/15284079_583315985195410_4289784661158093094_n.jpg" alt="Ảnh đại diện"/>
+							</div>
+							
+							<div class="col-md-7 col-sm-6 col-xs-12">
+								<h4>Trần Văn Thắng</h4>
+								<h5>Nông Lâm tp.HCM</h5>
+							</div>
+						</div>
+<!--						danh sách phòng tham gia-->
+						<div class="divcontent">
+							<h4>Phòng tham gia</h4>
+							<select multiple class="form-control">
+  								<option onClick="window.location = 'phong1.html'">Phòng 1</option>
+  								<option onClick="window.location = 'phong2.html'">Phòng 2</option>
+  								<option onClick="window.location = 'phong3.html'">Phòng 3</option>
+  								<option onClick="window.location = 'phong4.html'">Phòng 4</option>
+  								<option onClick="window.location = 'phong5.html'">Phòng 5</option>
+							</select>
+							<hr/>
+							<button type="button" class="btn btn-default" data-toggle="modal" data-target="#tham-gia-phong"><i class="fa fa-plus"></i> Tham gia phòng khác</button>
+						</div>
+<!--						hiển thị div nhập mã phòng-->
+						<div class="modal fade" id="tham-gia-phong" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+  							<div class="modal-dialog">
+    							<div class="modal-content">
+      								<div class="modal-header">
+        								<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        								<h4 class="modal-title" id="myModalLabel1">Tham gia phòng</h4>
+      								</div>
+      								<div class="modal-body">
+        								<form class="form-horizontal" role="form">
+  											<div class="form-group">
+    											<label for="room" class="col-sm-2 control-label">Nhập mã phòng</label>
+    											<div class="col-sm-10">
+      												<input type="text" class="form-control" id="room" placeholder="Mã phòng">
+    											</div>
+  											</div>
+										</form>
+      								</div>
+      								<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+										<button type="button" class="btn btn-primary">Tìm phòng</button>
+      								</div>
+    							</div>
+  							</div>
+						</div>
+						
+<!--						danh sách phòng quản lý-->
+						<div class="divcontent">
+							<h4>Phòng quản lý</h4>
+							<select multiple class="form-control">
+  								<option value="phong1">Phòng 1</option>
+  								<option value="phong2">Phòng 2</option>
+  								<option value="phong3">Phòng 3</option>
+  								<option value="phong4">Phòng 4</option>
+  								<option value="phong5">Phòng 5</option>
+							</select>
+							<hr/>
+							<button type="button" class="btn btn-default" data-toggle="modal" data-target="#tao-phong"><i class="fa fa-plus"></i> Tạo phòng mới<i></i></button>
+						</div>
+						
+						<div class="footer">
+							<footer>
+								<p>Hệ thống quản lý học tập © 2017</p>
+							</footer>
+						</div>
+					
+					</div>
+					
+<!--						hiển thị div nhập mã phòng-->
+					<div class="modal fade" id="tao-phong" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+  						<div class="modal-dialog">
+    						<div class="modal-content">
+      							<div class="modal-header">
+        							<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        							<h4 class="modal-title" id="myModalLabel2">Tạo phòng</h4>
+      							</div>
+      							<div class="modal-body">
+        							<form class="form-horizontal" role="form">
+  										<div class="form-group">
+    										<label for="room" class="col-sm-2 control-label">Nhập tên phòng</label>
+    										<div class="col-sm-10">
+      											<input type="text" class="form-control" id="name_room" placeholder="Tên phòng">
+    										</div>
+  										</div>
+									</form>
+      							</div>
+      							<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ma-phong" data-dismiss="modal">Tạo phòng</button>
+      							</div>
+    						</div>
+  						</div>
+					</div>
+<!--					mã phòng-->
+					<div class="modal fade" id="ma-phong" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+  						<div class="modal-dialog">
+    						<div class="modal-content">
+      							<div class="modal-header">
+        							<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        							<h4 class="modal-title" id="myModalLabel3">Mã phòng</h4>
+      							</div>
+      							<div class="modal-body">
+        							<form class="form-horizontal" role="form">
+  										<div class="form-group">
+    										<label for="room" class="col-sm-2 control-label">Mã phòng</label>
+    										<div class="col-sm-7">
+      											<input type="text" class="form-control" id="id_room" placeholder="Mã phòng" readonly>
+    										</div>
+    										<div class="col-sm-3">
+    											<button type="button" class="btn-copy btn btn-default" data-clipboard-action="copy" data-clipboard-target="#id_room">Sao chép</button>
+    										</div>
+  										</div>
+									</form>
+      							</div>
+      							<div class="modal-footer">
+									<button type="button" class="btn btn-primary" data-dismiss="modal">Xác nhận</button>
+      							</div>
+    						</div>
+  						</div>
+  						
+					</div>
+						
+					<div class="col-md-8">
+						<div class="divcontent">
+  							<div class="status row">
+  								<div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 media">
+   										<img class="media-photo img-responsive avt" src="../images/15284079_583315985195410_4289784661158093094_n.jpg" alt="Ảnh đại diện"/>
+   									</div>
+   									<div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 cnt">
+   									<div class="people-stt">
+   										<a href="#"><strong>Trần Văn Thắng </strong></a>
+										đã đăng trong <a href="#"><strong>Phòng 1 </strong></a>
+  									<br/>
+  									<span style="color: #B2B2B2">1 phút trước</span>
+   									</div>
+   								</div>
+   							</div>
+   							<div class="content-stt">
+   								Xin chào
+   							</div>
+   							<hr/>
+   							<div style="color: #B2B2B2; text-align: right">
+   								<i class="fa fa-comments-o"> <strong>Bình luận (2)</strong></i>
+   							</div>
+   							<hr/>
+   							<div class="comment">
+   								<div class="cmt-input row">
+   									<div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 media">
+   										<img class="media-photo img-responsive avt" src="../images/15284079_583315985195410_4289784661158093094_n.jpg" alt="Ảnh đại diện"/>
+   									</div>
+   									<div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 cnt">
+   										<input type="text" class="form-control" placeholder="Nhập bình luận"/>
+   									</div>
+   								</div>
+<!--   								bình luận thứ 1-->
+   								<br/>
+   								<div class="cmt row">
+   									<div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 media">
+   										<img class="media-photo img-responsive avt" src="../images/15284079_583315985195410_4289784661158093094_n.jpg" alt="Ảnh đại diện"/>
+   									</div>
+   									<div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 cnt">
+										<div class="people-stt">
+											<a href="#"><strong>Trương Tam Lang </strong></a>
+											Trời đ*
+										</div>
+									</div>
+   								</div>
+<!--   								bình luận thứ 2-->
+  								<br/>
+   								<div class="cmt row">
+   									<div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 media">
+   										<img class="media-photo img-responsive avt" src="../images/15284079_583315985195410_4289784661158093094_n.jpg" alt="Ảnh đại diện"/>
+   									</div>
+   									<div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 cnt">
+										<div class="people-stt">
+											<a href="#"><strong>Trương Tam Lang </strong></a>
+											Trời đ*
+										</div>
+									</div>
+   								</div>
+   							</div>
+  						</div>
+					</div>
+					<div class="clearfix visible-xs-block"></div>
+				</div>
+			</div>
+        </div>
+    </div>
+
+<!--java script-->
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<script src="../bootstrap/js/bootstrap.min.js"></script>
+	<script src="../js/profile.js"></script>
+	<script src="../js/clipboard.min.js"></script>
+	<script>
+    var clipboard = new Clipboard('.btn-copy');
+
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+    </script>
+	<script>
+		document.getElementById("close-slide").style.display = "none";
+		function openNav() {
+			document.getElementById("mySidenav").style.width = "250px";
+			document.getElementById("open-slide").style.display = "none";
+			document.getElementById("close-slide").style.display = "block";
+		}
+
+		function closeNav() {
+			document.getElementById("mySidenav").style.width = "0";
+			document.getElementById("open-slide").style.display = "block";
+			document.getElementById("close-slide").style.display = "none";
+		}
+	</script>
+</body>
+</html>
