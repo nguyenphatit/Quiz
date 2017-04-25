@@ -27,8 +27,8 @@ public class AccountC {
 
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String loginPage(Model model, WebRequest wr) {
-		String email = wr.getParameter("email1");
-		String password = wr.getParameter("pass1");
+		String email = wr.getParameter("email");
+		String password = wr.getParameter("password");
 		if (!accountService.checkEmail(email)) {
 			model.addAttribute("err", "Email không đúng");
 			model.addAttribute("email", email);
