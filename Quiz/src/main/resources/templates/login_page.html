@@ -25,19 +25,20 @@
 						
 						<div class="login-form">
 							<div class="sign-in-htm">
-								<form>
+								<form th:action="@{/account/login}" method="post">
 									<div class="group">
 										<label for="email" class="label">Email</label>
-										<input id="email" type="text" class="input"/>
+										<input id="email" type="email" class="input" required="required" name="email" th:value="${email}"/>
 									</div>
 									<div class="group">
 										<label for="password" class="label">Mật khẩu</label>
-										<input id="password" type="password" class="input"/>
+										<input id="password" type="password" class="input" required="required" name="password"/>
 									</div>
 									<div class="group">
 										<input type="submit" class="button" value="Đăng nhập"/>
 									</div>
 									<div class="hr"></div>
+									<p class="text-center" style="color: red" th:text="${err}"></p>
 									<div class="foot-lnk">
 										<p class="text-left">&emsp;
 											<a th:href="@{/account/forgot_pass}">Quên mật khẩu?</a>&emsp;
